@@ -1,0 +1,31 @@
+{
+  "name": "stats-preview-card",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.26.14",
+    "cssnano": "^5.0.6",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "gulp-terser": "^2.0.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-cli": "^2.3.0"
+  },
+  "devDependencies": {
+    "postcss": "^8.3.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Damon-Chhun/Stats-Preview-Card.git"
+  },
+  "author": "Damon Chhun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Damon-Chhun/Stats-Preview-Card/issues"
+  },
+  "homepage": "https://github.com/Damon-Chhun/Stats-Preview-Card#readme"
+}
