@@ -1,50 +1,303 @@
-html {
-  box-sizing: border-box;
-  font-size: 100%;
+//mixin for mobile view
+@mixin for-mobile-only {
+  @media (max-width: 375px) {
+    @content;
+  }
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body {
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  line-height: 1.3;
-  font-family: "Lato", sans-serif;
-  background-color: #202020;
-  background-image: url("/img/efe-yagiz-soysal-DGyVvAJNyPE-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 30% center;
-}
-
-h1,
-h2,
-h3 {
-  font-family: "Lora", serif;
-  margin-top: 0;
-  line-height: 1.1;
-  margin-bottom: 0.5em;
-}
-
-h1 {
-  font-size: calc(2rem + 2vw);
-}
-
-.box {
+.app {
   position: relative;
-  background-color: #3a5097;
-  color: #ffffff;
-  width: 90vw;
-  max-width: 700px;
-  padding: 2rem;
-  border-radius: 12px;
-  top: 15vh;
-  left: 5vw;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  width: 1440px;
+  height: 800px;
+
+  background: #0a0c1c;
+
+  @include for-mobile-only {
+    position: relative;
+    width: 375px;
+    height: 956px;
+
+    background: #0a0c1c;
+  }
+
+  .cardContainer {
+    position: absolute;
+    width: 1110px;
+    height: 446px;
+    left: 165px;
+    top: 177px;
+
+    @include for-mobile-only {
+      // border: solid 5px green;
+      position: absolute;
+      width: 327px;
+      height: 780px;
+      left: 24px;
+      right: 24px;
+      bottom: 88px;
+      top: 88px;
+    }
+
+    .infoContainer {
+      position: absolute;
+      width: 570px;
+      height: 446px;
+
+      background-color: #1b1937;
+
+      @include for-mobile-only {
+        //border: solid 5px green;
+        position: absolute;
+        height: 540px;
+        width: 327px;
+        top: 240px;
+      }
+
+      .header {
+        position: absolute;
+        width: 403px;
+        height: 88px;
+        left: 72px;
+        top: 71px;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 44px;
+        /* or 122% */
+
+        color: #ffffff;
+
+        @include for-mobile-only {
+          width: 264px;
+          height: 96px;
+          left: 31.5px;
+          right: 31.5px;
+          top: 20px;
+          bottom: 404px;
+          font-size: 27px;
+          line-height: 32px;
+          /* or 114% */
+          text-align: center;
+        }
+
+        .highlight {
+          color: #ab5cdb;
+        }
+      }
+
+      .description {
+        position: absolute;
+        width: 375px;
+        height: 71px;
+        left: 87px;
+        top: 185px;
+
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 25px;
+        /* or 167% */
+
+        color: #ffffff;
+
+        mix-blend-mode: normal;
+        opacity: 0.75;
+
+        @include for-mobile-only {
+          width: 264px;
+          height: 100px;
+          left: 31px;
+          top: 132px;
+        }
+      }
+
+      .list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style: none;
+
+        #company {
+          position: absolute;
+          width: 83px;
+          height: 56px;
+          left: 72px;
+          top: 326px;
+          color: white;
+
+          @include for-mobile-only {
+            width: 264px;
+            height: 56px;
+            left: 31px;
+            top: 292px;
+          }
+        }
+
+        #templates {
+          position: absolute;
+          width: 85px;
+          height: 52px;
+          left: 218px;
+          top: 326px;
+          color: white;
+
+          @include for-mobile-only {
+            width: 264px;
+            height: 56px;
+            left: 31px;
+            top: 372px;
+          }
+        }
+
+        #queries {
+          position: absolute;
+          width: 66.5px;
+          height: 56px;
+          left: 356.5px;
+          top: 331px;
+          color: white;
+
+          @include for-mobile-only {
+            width: 264px;
+            height: 56px;
+            left: 31px;
+            top: 452px;
+          }
+        }
+
+        li {
+          // border: dashed 5px white;
+          height: 29px;
+          left: 0.6%;
+          right: 28.31%;
+          top: calc(50% - 29px / 2 - 13.5px);
+
+          font-family: Inter;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 29px;
+
+          @include for-mobile-only {
+            position: absolute;
+
+            left: 0%;
+            right: 0%;
+
+            /* identical to box height */
+
+            text-align: center;
+
+            color: #ffffff;
+          }
+        }
+
+        span {
+          height: 25px;
+          left: 0%;
+          right: 1.2%;
+          top: calc(50% - 25px / 2 + 15.5px);
+
+          font-family: Lexend Deca;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 25px;
+          /* identical to box height, or 208% */
+
+          letter-spacing: 1px;
+          text-transform: uppercase;
+
+          color: #ffffff;
+
+          mix-blend-mode: normal;
+          opacity: 0.6;
+
+          @include for-mobile-only {
+            position: absolute;
+            height: 25px;
+            left: 0%;
+            right: 0%;
+            top: calc(50% - 25px / 2 + 15.5px);
+
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 25px;
+            /* identical to box height, or 208% */
+
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            color: #ffffff;
+
+            mix-blend-mode: normal;
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+  .right {
+    position: absolute;
+    width: 540px;
+    height: 446px;
+    left: 735px;
+    top: 177px;
+
+    @include for-mobile-only {
+      // border: solid 5px purple;
+      position: absolute;
+      width: 327px;
+      height: 240px;
+      left: 24px;
+      top: 88px;
+      overflow: hidden;
+    }
+
+    .mask {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #ab5cdb;
+      border-radius: 0px 8px 8px 0px;
+
+      @include for-mobile-only {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+
+        background: #ab5cdb;
+        border-radius: 8px 8px 0px 0px;
+      }
+
+      .img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        background: url("../../stats-preview-card-component-main/images/image-header-desktop.jpg");
+        mix-blend-mode: multiply;
+        opacity: 0.75;
+
+        @include for-mobile-only {
+          //border: dashed 3px white;
+          position: absolute;
+          width: 327px;
+          height: 240px;
+
+          background: url("../../stats-preview-card-component-main/images/image-header-desktop.jpg");
+          background-size: cover;
+          mix-blend-mode: multiply;
+          opacity: 0.75;
+        }
+      }
+    }
+  }
 }
