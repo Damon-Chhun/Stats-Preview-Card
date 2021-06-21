@@ -16,9 +16,6 @@ $mobile-image: "../../stats-preview-card-component-main/images/image-header-mobi
   height: 100vh;
 
   background: #0a0c1c;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   @include for-mobile-only {
     position: relative;
