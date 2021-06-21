@@ -10,7 +10,7 @@ function scssTask() {
   return src("app/scss/styles.scss", { sourcemaps: true })
     .pipe(sass())
     .pipe(postcss([cssnano()]))
-    .pipe(dest("dist", { sourcemaps: "." }));
+    .pipe(dest("app/dist", { sourcemaps: "." }));
 }
 
 // Javascript Task

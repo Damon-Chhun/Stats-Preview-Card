@@ -10,15 +10,20 @@ $mobile-image: "../../stats-preview-card-component-main/images/image-header-mobi
 
 .app {
   position: relative;
-  width: 1440px;
-  height: 800px;
+  // width: 1440px;
+  // height: 800px;
+  width: 100%;
+  height: 100vh;
 
   background: #0a0c1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @include for-mobile-only {
     position: relative;
-    width: 375px;
-    height: 956px;
+    // width: 375px;
+    // height: 956px;
 
     background: #0a0c1c;
   }
