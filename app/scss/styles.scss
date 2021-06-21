@@ -1,6 +1,9 @@
+$desktop-image: "../../stats-preview-card-component-main/images/image-header-desktop.jpg";
+$mobile-image: "../../stats-preview-card-component-main/images/image-header-mobile.jpg";
+
 //mixin for mobile view
 @mixin for-mobile-only {
-  @media (max-width: 375px) {
+  @media (max-width: 1000px) {
     @content;
   }
 }
@@ -282,7 +285,7 @@
         width: 100%;
         height: 100%;
 
-        background: url("../../stats-preview-card-component-main/images/image-header-desktop.jpg");
+        background: url($desktop-image);
         mix-blend-mode: multiply;
         opacity: 0.75;
 
@@ -292,7 +295,7 @@
           width: 327px;
           height: 240px;
 
-          background: url("../../stats-preview-card-component-main/images/image-header-desktop.jpg");
+          background: url($mobile-image);
           background-size: cover;
           mix-blend-mode: multiply;
           opacity: 0.75;
